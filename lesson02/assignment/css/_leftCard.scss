@@ -1,0 +1,28 @@
+// left
+.pic {
+	@include border-radius($radius);
+	text-align: $text-align;
+	padding-top:4%;
+	width: 40%;
+	float: left;
+	margin: 0 auto;
+    background-color: $gray;
+}
+.pic {
+	h2 { 
+		margin-top: 2%;
+        margin-bottom: 1%;
+        color: $black;
+	}
+	p { 
+		margin-top: 0; 
+	}
+	img {
+		border-radius: $card-image-radius;
+		width: $card-size-width;
+		height: $card-size-height;
+		display: block;
+		margin-left: auto;
+		margin-right: auto ;
+	}
+}
