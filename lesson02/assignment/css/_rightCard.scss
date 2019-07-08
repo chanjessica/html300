@@ -1,17 +1,10 @@
-.card {
-	@include border-radius($radius);
-	/*border-radius: 4%;*/
-	margin-top: $card-margin-top;
-	margin-left: 5%;
-	height: 45%;
-	width: 50%;
-	background-color: $gray;
-}
 .desc {
-	width: 60%;
-	float: right;
-	margin-top: $card-margin-top;
-	background-color: $gray;
+   /* border:  10px solid green;*/
+   width: 250px;
+   height: 200px;
+   background: $gray;
+   box-sizing: border-box;
+   display: inline-block;  
 	a { 
 		color: $text-color;
 		text-decoration: none; 
@@ -21,18 +14,18 @@
 	}
 }
 
-.bold {
-	font-weight: $font-weight;
-}
-
 ul {
 	list-style-type: $list-style-type;
 	padding-left: 0;
+	margin-bottom: 0;
 }
 li {
 	margin-top: $card-li-margin;
 	img {
 		width: $li-img-size;
 		height: auto;
+		background-color: $gray;
+		overflow: auto;
 	}
 }
+
