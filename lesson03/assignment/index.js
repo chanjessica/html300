@@ -89,13 +89,13 @@ $(document).ready(function () {
                             <li><span class="bold">Experience:</span> ${e.Experience}</li>
                             <li><span class="bold">School:</span> ${e.School}</li>
                             <li><span class="bold">Major:</span> ${e.Major}</li>
-                            <li><span class="bold">Email:</span>${e.Email}</a></li>
-                            <li><img src="/img/linkedin.svg" alt="linkedin logo">${e.LinkedInUrl}</a></li>
+                            <li><span class="bold">Email:</span><a href="mailto:${e.Email}"> ${e.Email}</a></li>
+                            <li><img src="/img/linkedin.svg" alt="linkedin logo"><a href="${e.LinkedInUrl}"> ${e.LinkedInUrl}</a></li>
                         </ul>
                     </div>
                 </div>
                 </div>`;
         //insert template data into html document
-        $(".template-hook").append(cardHtml);
+        $("#template-hook").append(cardHtml);
     });
 }); //document object

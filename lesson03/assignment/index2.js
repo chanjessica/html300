@@ -68,8 +68,8 @@ $(document).ready(function() {
                             <li><span class="bold">Experience:</span> ${this.cxperience}</li>
                             <li><span class="bold">School:</span> ${this.school}</li>
                             <li><span class="bold">Major:</span> ${this.major}</li>
-                            <li><span class="bold">Email:</span>${this.email}</a></li>
-                            <li><img src="/img/linkedin.svg" alt="linkedin logo">${this.url}</a></li>
+                            <li><span class="bold">Email:</span><a href="mailto:${this.email}"> ${this.email}</a></li>
+                            <li><img src="/img/linkedin.svg" alt="linkedin logo"><a href="${this.url}"> ${this.url}</a></li>
                         </ul>
                     </div>
                 </div>
