@@ -1,0 +1,5 @@
+// For Mobile
+@media (max-width: $breakpoint-small) {
+    .pic , .desc {width:100%;}
+    .desc { margin-top:0; }
+}

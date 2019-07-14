@@ -1,6 +1,47 @@
-// Import partials here
-@import 'base.normalize';
-@import 'settings.variables';
+// Import partials here @import 'base.normalize'; 
 @import 'settings.responsive';
-@import 'components.content';
+@import 'settings.variables';
+//@import 'components.content';
+
+// this has to come before -leftCard and _rightCard
+@mixin border-radius($r) {
+	-webkit-border-radius: $r;
+	-moz-border-radius: $r;
+	-ms-border-radius: $r;
+	border-radius: $r;
+}
+
+// card border
+.mkcard {
+	margin-top: 100px;
+	margin-left: 100px;
+    border: 20px solid $gray;
+    width: 540px;
+    height: auto;
+    background: $white;
+}
+
+// card container
+.card {
+    border: 10px solid $white;
+    width: 500px;
+    height: auto;
+    background: $white;
+}
+
+.bold {
+    color: $black;
+    font-weight: $font-weight;
+}
+
+
+//styling the left hand side of the card
+@import 'leftCard';
+
+//styling the right hand side of the card
+@import 'rightCard';
+
+// For Mobile
+@import 'media';
+
 
