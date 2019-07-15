@@ -1,0 +1,33 @@
+// for picture on the left side
+
+.pic {
+	@include border-radius($radius);
+	/* border: 10px solid green;
+		overflow: auto;  */
+	 width: 230px;
+	 height: 200px;
+	 background: $white ;
+	 box-sizing: border-box;
+	 display: inline-block;
+
+	h2 { 
+		margin-top: 2%;
+		margin-bottom: 1%;
+		width: 100%;
+		color: $black;
+		text-align: $text-align;
+	}
+	p { 
+		margin-top: 0; 
+		text-align: $text-align;
+		font-weight: $font-weight;
+	}
+	img {
+		border-radius: $card-image-radius;
+		width: $card-size-width;
+		height: $card-size-height;
+		display: block;
+		margin-left: auto;
+		margin-right: auto ;
+	}
+}
