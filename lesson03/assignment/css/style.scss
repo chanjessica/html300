@@ -16,7 +16,8 @@
 	margin-top: 100px;
 	margin-left: 100px;
     border: 20px solid $gray;
-    width: 540px;
+    max-width: 540px;
+    width: 100%;
     height: auto;
     background: $white;
 }
@@ -24,7 +25,8 @@
 // card container
 .card {
     border: 10px solid $white;
-    width: 500px;
+    max-width: 500px;
+    width: 100%;
     height: auto;
     background: $white;
 }
