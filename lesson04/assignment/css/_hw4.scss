@@ -23,45 +23,49 @@ h1 {
 		 transform: scale(1.5, 1.5, 2);
 	 }
  }
- /* sliding picture */
+/*----------------- sliding picture --------------*/
  img {
-	 display: block;
- }
- .auto-slide {
-	 width:  $img-w;
-	 height: $img-h; 
-	 overflow: hidden;
-	 display: block;
-	 margin-left: auto;
-	 margin-right: auto;
- }
- .auto-slide--content {
-	 list-style: none;
-	 display: flex;
-	 position: relative;
-	 /* left: -1280px;  */
-	 /*  transform: translateX(-640px); */
-	 animation-name: slide;
-	 animation-duration: 30s;
-	 animation-iteration-count: infinite;
-	 animation-timing-function: ease-in-out;
-	 animation-direction: normal;
- }
-  .auto-slide--content:hover {
-	 animation-play-state: paused;
- }
-  @keyframes slide {
-	 10% { transform: translateX(0); }
-	 15%,20% { transform: translateX(-640px); }
-	 25%,30% { transform: translateX(-1280px); }
-	 35%,40% { transform: translateX(-1920px); }
-	 45%,50% { transform: translateX(-2560px); }
-	 55%,60% { transform: translateX(-3200px); }
-	 65%,70% { transform: translateX(-3840px); }
-	 85%,90% { transform: translateX(-4580px); }
-	 100% { transform: translateX(0); }
- }
-  
+	display: block;
+}
+
+.auto-slide {
+	/* outline: 1px solid red;*/
+	width: $img-w;
+	height: $img-h;
+	overflow: hidden;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.auto-slide__content {
+	list-style: none;
+	display: flex;
+	position: relative;
+	/* left: -1280px;  */
+	/*  transform: translateX(-640px); */
+	animation-name: slide;
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-direction: normal;
+}
+
+.auto-slide__content:hover {
+	animation-play-state: paused;
+}
+
+@keyframes slide {
+	10% { transform: translateX(0); }
+	15%,20% { transform: translateX(-640px); }
+	25%,30% { transform: translateX(-1280px); }
+	35%,40% { transform: translateX(-1920px); }
+	45%,50% { transform: translateX(-2560px); }
+	55%,60% { transform: translateX(-3200px); }
+	65%,70% { transform: translateX(-3840px); }
+	85%,90% { transform: translateX(-4580px); }
+	100% { transform: translateX(0); }
+}
  /* ------  menu item: click menu to see price ----------   */
   section {
 	 margin-top: 2%;
