@@ -1,0 +1,166 @@
+/*  fadeIn header */
+h1 {
+	line-height: $h1-line-h;
+	 font-size: $h1-font-sz;
+	 color:  $h1-color;
+	 background-color: $h1-bcolor;
+	 text-align: $text-align;
+	 transform-origin: 50% 100%;
+	 text-shadow: 2px 2px 2px #333;
+	 opacity: 0;
+	 animation: fadeIn;
+	 animation-duration: 5s;
+	 animation-timing-function: ease-in-out;
+	 animation-fill-mode: forwards;
+ }
+ @keyframes fadeIn {
+	 from {
+		 opacity: 0;
+		 transform: scale(.5, .5, 1)
+	 }
+	 to {
+		 opacity: 1;
+		 transform: scale(1.5, 1.5, 2);
+	 }
+ }
+ /* sliding picture */
+ img {
+	 display: block;
+ }
+ .auto-slide {
+	 width:  $img-w;
+	 height: $img-h; 
+	 overflow: hidden;
+	 display: block;
+	 margin-left: auto;
+	 margin-right: auto;
+ }
+ .auto-slide--content {
+	 list-style: none;
+	 display: flex;
+	 position: relative;
+	 animation-name: slide;
+	 animation-duration: 30s;
+	 animation-iteration-count: infinite;
+	 animation-timing-function: ease-in-out;
+	 animation-direction: normal;
+ }
+  .auto-slide--content:hover {
+	 animation-play-state: paused;
+ }
+  @keyframes slide {
+	 10% { transform: translateX(0); }
+	 15%,20% { transform: translateX(-640px); }
+	 25%,30% { transform: translateX(-1280px); }
+	 35%,40% { transform: translateX(-1920px); }
+	 45%,50% { transform: translateX(-2560px); }
+	 55%,60% { transform: translateX(-3200px); }
+	 65%,70% { transform: translateX(-3840px); }
+	 85%,90% { transform: translateX(-4580px); }
+	 100% { transform: translateX(0); }
+ }
+  
+ /* ------  menu  item ----------   */
+  section {
+	 margin-top: $margin-top;
+	 font-size: $menu-font-sz;
+ }
+ .entrees {
+	float: left;
+	width: $menu-w;
+	color: $menu-color;
+	background-color: $menu-bcolor;
+}
+ .entrees:hover {
+	 cursor: pointer;
+ }
+ .front{
+	position: absolute;
+	padding-top: $padding-top;
+	text-align: $text-align;
+	color: $menu-item-color;
+	font-weight: bolder;
+	transform: rotateY(0deg);
+	transition: transform 0.5s linear 0s;
+	backface-visibility: hidden;
+ }
+ .back{
+	position: absolute;
+	padding-top: $padding-top;
+	text-align: $text-align;
+	color: $menu-price-color;
+	font-weight: bolder;
+	transform: rotateY(180deg); /*hidden*/
+	transition: transform 0.5s linear 0s;
+	backface-visibility: hidden;
+ }
+ .entrees:hover .front{ transform: rotateY(-180deg);}
+ .entrees:hover .back{ transform: rotateY(0deg);}
+ 
+ /* ---------------------- */
+ .bubbles{
+	position: absolute;   bottom: 0;
+	border-radius: 50%;
+	animation: bbMove linear infinite normal both;
+ }
+ #b1{
+	background-color: $b1-color;
+	width: 25px;
+	height: 25px;
+	left: 50px;
+	animation-duration: 4s;
+ }
+ #b2{
+	background-color: $b2-color;
+	width: 15px;
+	height: 15px;
+	left: 100px;
+	animation-duration: 3s;
+ }
+ #b3{
+	background-color: $b3-color;
+	width: 30px;
+	height: 30px;
+	left: 170px;
+	animation-duration: 2s;
+ }
+ #b4{
+	background-color: $b4-color;
+	width: 15px;
+	height: 15px;
+	left: 400px;
+	animation-duration: 1.5s;
+ }
+ #b5{
+	background-color: $b5-color;
+	width: 20px;
+	height: 20px;
+	right: 80px;
+	animation-duration: 2s;
+ }
+ #b6{
+	background-color: $b6-color;
+	width: 15px;
+	height: 15px;
+	right: 200px;
+	animation-duration: 3s;
+ }
+ #b7{
+	background-color: $b7-color;
+	width: 25px;
+	height: 25px;
+	right: 170px;
+	animation-duration: 4s;
+ }
+ #b8{
+	background-color: $b8-color;
+	width: 23px;
+	height: 23px;
+	right: 450px;
+	animation-duration: 2s;
+ }
+ @keyframes bbMove{
+	from { bottom:0; }
+	to {bottom: 650px; }
+ }
+ 
