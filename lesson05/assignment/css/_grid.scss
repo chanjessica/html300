@@ -1,0 +1,32 @@
+.grid {
+    display: grid;
+    grid: 15% 8% auto 10% /repeat(12, 1fr);
+    grid-template-areas:
+	   "h h h h h h h h h h"
+       "n n n n n n n n n n"
+       "s s s m m m m m m m"
+       "f f f f f f f f f f";
+	grid-gap: 2px;
+	min-height: 100vh;
+}
+.header {
+    border: 1px solid white;
+    grid-area: h;
+}
+.nav {
+	border: 1px solid white;
+    grid-area: n;
+}
+.side, .main {
+	border: 1px solid white;
+}
+.side {
+    grid-area: s;
+}
+.main {
+    grid-area: m;
+}
+.footer {
+	border: 1px solid white;
+    grid-area: f;
+}
