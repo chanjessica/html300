@@ -1,0 +1,15 @@
+@mixin menu-font{
+	position: absolute;
+	width: $menu-w;
+	padding-top: $padding-top;
+	text-align: $text-align;
+	font-weight: bolder;
+}
+@mixin bubble($color,$size,$loc,$d) {
+    background-color: $color;
+	width: $size;
+	height: $size;
+	left: $loc;
+	animation-duration: $d;
+}
+

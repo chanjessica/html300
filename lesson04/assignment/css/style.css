@@ -1,1 +1,198 @@
-#one{height:400px;width:400px;background-color:#00f}#one #two{height:200px;width:200px;background-color:red}
+body, html, ul, li, img, div, nav {
+  margin: 0;
+  padding: 0; }
+
+html {
+  /* For browsers that do not support gradients */
+  /* background-image: linear-gradient(red, yellow); */
+  background-image: linear-gradient(-10deg, #C62828, #BA68C8);
+  /*  min-height: 100vh; */ }
+
+body {
+  width: 80%;
+  margin: 50px auto;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-shadow: 1px 1px 0 #000; }
+
+h1 {
+  line-height: 80px;
+  font-size: 2em;
+  color: #fff;
+  background-color: #660066;
+  text-align: center;
+  transform-origin: 50% 100%;
+  text-shadow: 2px 2px 2px #333;
+  opacity: 0;
+  animation: fadeIn;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: .2s; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5, 0.5, 1); }
+  to {
+    opacity: 1;
+    transform: scale(1.5, 1.5, 2); } }
+
+/*----------------- sliding picture --------------*/
+img {
+  display: block; }
+
+.auto-slide {
+  /* outline: 1px solid red;*/
+  width: 640px;
+  height: 480px;
+  overflow: hidden;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.auto-slide__content {
+  list-style: none;
+  display: flex;
+  position: relative;
+  /* left: -1280px;  */
+  /*  transform: translateX(-640px); */
+  animation-name: slide;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal; }
+
+.auto-slide__content:hover {
+  animation-play-state: paused; }
+
+@keyframes slide {
+  10% {
+    transform: translateX(0); }
+  15%, 20% {
+    transform: translateX(-640px); }
+  25%, 30% {
+    transform: translateX(-1280px); }
+  35%, 40% {
+    transform: translateX(-1920px); }
+  45%, 50% {
+    transform: translateX(-2560px); }
+  55%, 60% {
+    transform: translateX(-3200px); }
+  65%, 70% {
+    transform: translateX(-3840px); }
+  85%, 90% {
+    transform: translateX(-4580px); }
+  100% {
+    transform: translateX(0); } }
+
+/* ------  menu item: click menu to see price ----------   */
+section {
+  margin-top: 2%;
+  font-size: 1.1em; }
+
+.entrees {
+  float: left;
+  width: 24%;
+  height: 100px;
+  color: #ffffff;
+  background-color: none; }
+
+.entrees:hover {
+  cursor: pointer; }
+
+.front {
+  position: absolute;
+  width: 24%;
+  padding-top: 2%;
+  text-align: center;
+  font-weight: bolder;
+  transform: rotateY(0deg);
+  transition: transform 0.5s linear 0s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden; }
+
+.back {
+  position: absolute;
+  width: 24%;
+  padding-top: 2%;
+  text-align: center;
+  font-weight: bolder;
+  transform: rotateY(180deg);
+  transition: transform 0.5s linear 0s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden; }
+
+.entrees:hover .front {
+  transform: rotateY(-180deg); }
+
+.entrees:hover .back {
+  transform: rotateY(0deg); }
+
+/* ---------  moving bubble from bottom to top ------------- */
+.bubbles {
+  position: absolute;
+  bottom: 0;
+  border-radius: 50%;
+  animation: bbMove linear infinite normal both; }
+
+#b1 {
+  background-color: #ffffff;
+  width: 25px;
+  height: 25px;
+  left: 50px;
+  animation-duration: 4s; }
+
+#b2 {
+  background-color: #F1352B;
+  width: 15px;
+  height: 15px;
+  left: 100px;
+  animation-duration: 3s; }
+
+#b3 {
+  background-color: #ff6600;
+  width: 30px;
+  height: 30px;
+  left: 170px;
+  animation-duration: 2s; }
+
+#b4 {
+  background-color: #ffb617;
+  width: 12px;
+  height: 12px;
+  left: 400px;
+  animation-duration: 1.5s; }
+
+#b5 {
+  background-color: #32CC32;
+  width: 20px;
+  height: 20px;
+  left: 1300px;
+  animation-duration: 2.5s; }
+
+#b6 {
+  background-color: #C7E146;
+  width: 13px;
+  height: 13px;
+  left: 1430px;
+  animation-duration: 3s; }
+
+#b7 {
+  background-color: #150f96;
+  width: 25px;
+  height: 25px;
+  left: 1550px;
+  animation-duration: 4s; }
+
+#b8 {
+  background-color: #6e27c5;
+  width: 20px;
+  height: 20px;
+  left: 1600px;
+  animation-duration: 2s; }
+
+@keyframes bbMove {
+  from {
+    bottom: 0; }
+  to {
+    bottom: 650px; } }
