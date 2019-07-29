@@ -8,8 +8,8 @@ html {
     font-size: 1rem;
 	text-align: center;
 }
+/*-- style for body --*/
 body {
-	width: 100%;
 	margin: 0 auto;
     background-image: linear-gradient(-10deg, #C62828, #BA68C8);
     color: #fff;
@@ -20,7 +20,7 @@ body {
 a{
     text-decoration: none;
 }
-
+/*--- style for nav bar ---*/
 .list_item {
 	list-style-type: none;
   	border: 1px solid white;
@@ -33,8 +33,6 @@ a{
     text-decoration: underline;
     transition: background-color ease 0.5s;
 }
-
-
 /*-- style Font Awesome Icons  --*/
 .fa-home {
     color: white;
