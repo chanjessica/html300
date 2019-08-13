@@ -61,7 +61,12 @@
 
 <script>
   export default {
-      name: "contact"
+      name: "contact",
+      data(){
+          return {
+              login: false
+          };
+      }
   }
 </script>
 
