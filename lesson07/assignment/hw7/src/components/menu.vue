@@ -2,160 +2,46 @@
 
 <template>
    <div>
-      <h2 class="mt-4 text-center">Bootstrap4 Grid system</h2>
-      <!-- this page use Bootstrap4 Grid system  -->
-      <!-- Columns start at 100% wide on mobile....and bump up to 25% wide on desktop -->
-      <div class="container">
-         <div class="row">
-            <div class="menu-col1 bg-warning col-xl-3 col-lg-4 col-md-6 col-sm-12">
-               <!-- 1st column -->
-               <h4>Rice</h4>
-               <div class="entrees" id="e1">
-                  <div class="front">
-                     Steam Pork Dumpling <br>
-                  </div>
-                  <div class="back">
-                     $9.95
-                  </div>
-               </div>
-               <div class="entrees" id="e2">
-                  <div class="front">
-                     Hot and Sour Soup
-                  </div>
-                  <div class="back">
-                     $5.95
-                  </div>
-               </div>
-               <div class="entrees" id="e3">
-                  <div class="front">
-                     Fried Pork Chop <br>
-                  </div>
-                  <div class="back">
-                     $9.95
-                  </div>
-               </div>
-               <div class="entrees" id="e4">
-                  <div class="front">
-                     Pot Potsticker
-                  </div>
-                  <div class="back">
-                     $7.95
-                  </div>
-               </div>
-               <div class="entrees" id="e5">
-                  <div class="front">
-                     General Tso Chicken <br>
-                  </div>
-                  <div class="back">
-                     $9.95
-                  </div>
-               </div>
-               <div class="entrees" id="e6">
-                  <div class="front">
-                     Beef Noodle Soup
-                  </div>
-                  <div class="back">
-                     $10.95
-                  </div>
-               </div>
-               <div class="entrees" id="e7">
-                  <div class="front">
-                     Rice Noodle with Meat Souce <br>
-                  </div>
-                  <div class="back">
-                     $9.95
-                  </div>
-               </div>
-               <div class="entrees" id="e8">
-                  <div class="front">
-                     Peking Duck
-                  </div>
-                  <div class="back">
-                     $65.95
-                  </div>
+      <h2 class="mt-4 text-center">{{ message }}</h2>
+      <!-- this page use BootstrapVue Grid system  -->
+      <b-container class="bv-example-row">
+      <b-row>
+           <!-- 1st column -->
+         <b-col md  id="e1" > 
+            <h4>Beef</h4>
+            <div class="entrees" id="e3">
+               <div v-for = "food in rice" :key="food.id">
+                 {{ food.item }} - ${{ food.price}}
                </div>
             </div>
-            <!-- end of 1st column -->
-            <div class="menu-col2 bg-info col-xl-3 col-lg-4 col-md-6 col-sm-12">
-               <!-- 2nd column -->
-               <h4>Chicken</h4>
+         </b-col>
+            <!-- 2rd column -->
+         <b-col md  id="e3" > 
+            <h4>Beef</h4>
+            <div class="entrees" id="e4">
+               <div v-for = "food in beef" :key="food.id">
+                 {{ food.item }} - ${{ food.price}}
+               </div>
             </div>
-            <!-- end of 2nd column -->
-            <div class="menu-col3 bg-primary col-xl-3 col-lg-4 col-md-6 col-sm-12">
-               <!-- 3rd column -->
-               <h4>Beef</h4>
+         </b-col>
+            <!-- 3rd column -->
+         <b-col md id="e1">
+            <h4>Checken</h4>
+               <div v-for = "food in chicken" :key="food.id">
+                 {{ food.item }} - ${{ food.price}}
+               </div>
+         </b-col>
+           <!-- 4th column -->
+         <b-col md  id="e3" > 
+            <h4>pork</h4>
+            <div class="entrees" id="e2">
+               <div v-for = "food in pork" :key="food.id">
+                 {{ food.item }} - ${{ food.price}}
+               </div>
             </div>
-            <!-- end of 3rd column -->
-            <div class="menu-col4 bg-danger col-xl-3 col-lg-4 col-md-6 col-sm-12">
-               <!-- 4th column -->
-               <h4>Pork</h4>
-               <div class="entrees" id="e1">
-                  <div class="front">
-                     Steam Pork Dumpling <br>
-                  </div>
-                  <div class="back">
-                     $9.95
-                  </div>
-               </div>
-               <div class="entrees" id="e2">
-                  <div class="front">
-                     Hot and Sour Soup
-                  </div>
-                  <div class="back">
-                     $5.95
-                  </div>
-               </div>
-               <div class="entrees" id="e3">
-                  <div class="front">
-                    Fried Pork Chop <br>
-                  </div>
-                  <div class="back">
-                    $9.95
-                  </div>
-               </div>
-               <div class="entrees" id="e4">
-                  <div class="front">
-                    Pot Potsticker
-                  </div>
-                  <div class="back">
-                    $7.95
-                  </div>
-               </div>
-               <div class="entrees" id="e5">
-                  <div class="front">
-                    General Tso Chicken <br>
-                  </div>
-                  <div class="back">
-                    $9.95
-                  </div>
-               </div>
-               <div class="entrees" id="e6">
-                  <div class="front">
-                    Beef Noodle Soup
-                  </div>
-                  <div class="back">
-                    $10.95
-                  </div>
-               </div>
-               <div class="entrees" id="e7">
-                  <div class="front">
-                    Rice Noodle with Meat Souce <br>
-                  </div>
-                  <div class="back">
-                    $9.95
-                  </div>
-               </div>
-               <div class="entrees" id="e8">
-                  <div class="front">
-                    Peking Duck
-                  </div>
-                  <div class="back">
-                    $65.95
-                  </div>
-               </div>
-            </div> <!-- end of 4th column -->
-         </div>   <!-- enf of "row" -->
-      </div>      <!-- enf of "container" -->
+         </b-col>
+      </b-row>
+      </b-container>
 
       <footer class="my-5">
          <!-- ######  COLLAPSE  #######-->
@@ -174,13 +60,47 @@
 
 <script>
    export default {
-   
+      data() {
+         return {
+         message: " BootstrapVue Grid",
+         rice : [
+                  {id:0, item: "Stream Rice", price: "1.95"},
+                  {id:1, item: "Chickeen Fried Rice", price: "6.77"},
+                  {id:2, item: "Beef Fired Rice", price: "9.99"},
+                  {id:3, item: "Pork Fired Rice", price: "8.99"}
+                ],
+         beef : [
+                  {id:0, item: "Beef Noodle Soup", price: "9.95"},
+                  {id:1, item: "Hot and Sour Soup", price: "6.77"},
+                  {id:2, item: "Pot Potsticker", price: "8.99"}
+                ],
+         pork : [
+                  {id:0, item: "Sweet and Sour Pork", price: "11.95"},
+                  {id:1, item: "BBQ Pork", price: "8.77"},
+                  {id:2, item: "Pot Potsticker", price: "8.99"}
+                ],
+         chicken : [ 
+                  {id:0, item: "General Tso Chicken", price: "12.95"},
+                  {id:1, item: "Hot and Sour Soup", price: "6.77"},
+                  {id:2, item: "Pot Potsticker", price: "8.99"}
+                  ]
+         };
+      }
    }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-   body {
-   background: lightblue;
+   #e1 {
+      background: gold;
+   }
+   #e2 {
+      background: plum;
+   }
+   #e3 {
+      background: lightblue;
+   }
+   #e4{
+      background: yellow; 
    }
 </style>

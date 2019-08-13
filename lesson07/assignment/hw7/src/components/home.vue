@@ -1,42 +1,49 @@
 <template>
   <div>
+    <b-carousel   id="carousel-1"   v-model="slide"  :interval="4000"   controls
+      indicators   background="#ababab"  img-width="640" img-height="480" 
+      style="text-shadow: 1px 1px 2px #333;"
+      @sliding-start="onSlideStart"
+      @sliding-end="onSlideEnd"
+    >
+      <h2> Images </h2>
+      <!-- Slides image -->
+      <b-carousel-slide   class="MyCustomClass"
+        v-for="i in imgList" 
+        :key="i.id" 
+        img-src= ":i.imgSrc" 
+        alt=":i.img">
+      </b-carousel-slide>
 
-    <!-- #######  slider  ####### -->
-    <h2>carousel slider</h2>
-    <div id="food" class="carousel slide justify-content-center" data-ride="carousel">
+    </b-carousel>
 
-      <!-- Indicators -->
-      <ul class="carousel-indicators">
-        <li data-target="#food" data-slide-to="0" class="active"></li>
-        <li data-target="#food" data-slide-to="1"></li>
-        <li data-target="#food" data-slide-to="2"></li>
-      </ul>
-      
-      <!-- The slideshow -->
-      <div class="carousel-inner">
-        <div class="carousel-item active justify-content-center">
-          <img class="rounded img-fluid mx-auto  d-block" src="http://lorempixel.com/output/food-q-c-640-480-1.jpg" alt="food 1">
-        </div>
-        <div class="carousel-item">
-          <img class="rounded img-fluid mx-auto d-block" src="http://lorempixel.com/output/food-q-c-640-480-2.jpg" alt="food 2">
-        </div>
-        <div class="carousel-item">
-          <img class="rounded img-fluid mx-auto d-block" src="http://lorempixel.com/output/food-q-c-640-480-3.jpg" alt="food 3">
-        </div>
-      </div>
-      
-      <!-- Left and right controls -->
-      <a class="carousel-control-prev text-warning" href="#food" data-slide="prev"> <span class="carousel-control-prev-icon"></span></a>
-      <a class="carousel-control-next text-warning" href="#food" data-slide="next"> <span class="carousel-control-next-icon"></span></a>
-    </div>
+    <p class="mt-4">
+      Slide #: {{ slide }}<br>
+      Sliding: {{ sliding }}
+    </p>
   </div>
+
 </template>
 
 <script>
-export default {
+  export default {
+    data() {
+      return {
+        message: "carousel slider",
+        imgList: [  {id:0, img: "food 1", imgSrc: '"http://lorempixel.com/output/food-q-c-640-480-1.jpg"'},
+                    {id:1, img: "food 2", imgSrc: '"http://lorempixel.com/output/food-q-c-640-480-2.jpg"'},
+                    {id:2, img: "food 3", imgSrc: '"http://lorempixel.com/output/food-q-c-640-480-3.jpg"'}
+                ]
+      };
+    }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+   .MyCustomClass {
+      min-height: 100vh;
+      width: 100%;    
+      object-fit: cover; 
+    }
 </style>
