@@ -1,99 +1,74 @@
 <template>
-  <div>
-
-    <!-- #######  modal  ####### -->
-    <div class="container">
-        <!-- Button to Open the Modal -->
-        <button class="btn btn-lg btn-outline-danger m-5 px-5" data-toggle="modal" data-target="#login">
-            Log In
-        </button>
-        <!-- The Modal -->
-        <div class="modal" id="login">
-            <div class="modal-dialog">
-               <div class="modal-content">
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">Log In to Your Account</h4>
-                        <button class="close" data-dismiss="modal">&times;</button>
+    <div>
+        <b-container fluid>
+             <!-- #######  modals  ####### -->
+            <h2 class="mt-4 text-center" >modals </h2>
+            <b-button v-b-modal.modal-1>FeedBack</b-button>
+             <!-- Modal body -->
+            <b-modal id="modal-1" title="Thank You!">
+                <form>
+                    <div class="form-group">
+                        <label class="mt-3">Name</label>
+                        <input type="text" class="form-control form-control-lg" placeholder="user name">
+                        <label class="mt-3">Email</label>
+                        <input type="email" class="form-control form-control-lg" placeholder="xyz@yahoo.com">
+                        <label class="mt-3">Password</label>
+                        <input type="password" class="form-control form-control-lg" placeholder="*******">
+                        <input type="submit" value="Submit" class="mt-3 btn btn-success">
                     </div>
-                    
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <label class="mt-3">Name</label>
-                                <input type="text" class="form-control form-control-lg" placeholder="user name">
-                                <label class="mt-3">Email</label>
-                                <input type="email" class="form-control form-control-lg" placeholder="xyz@yahoo.com">
-                                <label class="mt-3">Password</label>
-                                <input type="password" class="form-control form-control-lg" placeholder="*******">
-                                <input type="submit" value="Submit" class="mt-3 btn btn-success">
-                            </div>
-                        </form>
-                    </div>
-                    
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                        <button  class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
-                </div>  <!-- end of "modal-content" -->    
-            </div> <!-- end of "modal-dialog" -->
-        </div>  <!-- end of LOGIN "model" -->
-     </div><!-- end of "container" --> 
+                </form>
+            </b-modal>
 
+            <!-- #######  popover  ####### -->
+            <h2 class="mt-4 text-center" >popover </h2>
+            <b-row class="text-center ">
+                 <b-col md="4" class="py-3">
+                    <b-button v-b-popover.hover.top="'Exit'" variant="primary">Log Out</b-button>
+                </b-col>
+                <b-col md="8" class="px-5">
+                    <b-button v-b-popover.hover.bottom="'Sign IN'" variant="primary"> Log IN</b-button>
+                </b-col>
+             </b-row>
+            
+            <!-- #######  Tooltip  ####### -->
+            <h2 class="mt-4 text-center" >tooltip </h2>
+            <b-row>
+                <b-col md="4" class="py-4">
+                <b-button id="button-1" variant="outline-success">Live chat</b-button>
+                </b-col>
+                <b-col md="4" class="py-4">
+                <b-button id="button-2" variant="outline-success">Html chat</b-button>
+                </b-col>
+                <b-col md="4" class="py-4">
+                <b-button ref="button-3" variant="outline-success">Alternative chat</b-button>
+                </b-col>
+            </b-row>
 
-   <!-- #######  tooltip   ####### -->
-    <h2 class="mt-4 text-center" >tooltip </h2>
+            <!-- Tooltip title specified via prop title -->
+            <b-tooltip target="button-1" title="Online!"></b-tooltip>
 
-    <div class="container  mx-auto">
-        <button class="btn btn-lg btn-info" data-toggle="tooltip" data-placement="left" title="www.HappyFood.com">
-            Order Online
-        </button>
-        <button class="btn btn-lg btn-primary" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<em>(206)123-4567</em>">
-            Order by Phone
-         </button>    
-         <button class="btn btn-lg btn-warning" data-toggle="tooltip" data-placement="top" title="Seattle Pike Market">
-            Dine In
-         </button>
-         <button class="btn btn-lg btn-danger" data-toggle="tooltip" data-placement="right" title="www.onYourOwnFeet.com">
-             Delivery
-        </button>
-    </div>  <!-- end of tooltip "container" -->
- 
-    <!-- #######  popover  ####### -->
-    <h2 class="mt-4 text-center justify-content-center" >popovers </h2>
-    <button id="pop" class="btn btn-danger" 
-            data-trigger="focus" 
-            data-container="body" 
-            data-toggle="popover" 
-            data-placement="bottom" 
-            data-content="data-placement is not working on TOOLTIP, data-html=true is also not working">    
-        display on bottom
-    </button>
- 
-    <!-- #######  copy right  #####-->
-    <footer>
-        <div class="container bg-dark">
-            <div class="row">
-                <div class="col text-center py-4">
-                    <p>Copyright &copy; <span id="year"></span></p>
-                </div>                
-            </div>
-        </div>
-    </footer>
+            <!-- HTML title specified via default slot -->
+            <b-tooltip target="button-2" placement="bottom">
+                Hello <strong>World!</strong>
+            </b-tooltip>
 
-
-  </div>  
+            <!-- Tooltip for an element identified by ref -->
+            <b-tooltip :target="() => $refs['button-3']" title="Alternative!"></b-tooltip>
+        
+        </b-container>
+    </div>  
 </template>
 
 <script>
   export default {
+      name: "contact"
   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 body {
+    min-height: 100vh;
     background: pink;
 }
 </style>

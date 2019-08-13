@@ -1,79 +1,66 @@
 <template>
-  <div>
-        <!-- ######  ACCORDION  #######-->
-    <h2 class="mt-4 text-center" >accordion</h2>
-    <div id="review">
-      <div class="card">
-          <div class="card-header">
-              <h5>Customer Review 
-              <a href="#one" data-parent="#review" data-toggle="collapse">
-                  One
-              </a>
-              </h5>
-          </div> <!-- end of "card-header" -->
-          <div id="one" class="collapse show">
-              <div class="card-body">
-                  1-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, nostrum voluptatum! Illo cum repellat, vero sequi, impedit repellendus ipsa incidunt distinctio nostrum in quaerat velit, assumenda quos earum quo quas!
-              </div>  <!-- end of "card-body" -->   
-          </div>
-      </div> <!-- end of "card" one -->
-
-      <div class="card">
-        <div class="card-header">
-          <h5>Customer Review 
-            <a href="#two" data-parent="#review" data-toggle="collapse">  Two  </a>
-          </h5>
-        </div> <!-- end of "card-header" -->
-			<div id="two" class="collapse">
-				<div class="card-body">
-					2-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, nostrum voluptatum! Illo cum repellat, vero sequi, impedit repellendus ipsa incidunt distinctio nostrum in quaerat velit, assumenda quos earum quo quas!
-					<p class="lead"><strong>bootstrap lead class</strong> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nesciunt hic, dolorem molestias beatae veritatis culpa aut quam natus libero. </p>
-				</div>  <!-- end of "card-body" -->   
-			</div>
-		</div> <!-- end of "card" two -->
-
-		<div class="card">
-        <div class="card-header">
-          <h5>Customer Review 
-            <a href="#three" data-parent="#review" data-toggle="collapse">  Three  </a>
-          </h5>
-        </div> <!-- end of "card-header" -->
-			<div id="three" class="collapse">
-        <div class="card-body">
-          3- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, nostrum voluptatum! Illo cum repellat, vero sequi, impedit repellendus ipsa incidunt distinctio nostrum in quaerat velit, assumenda quos earum quo quas!
-        </div>  <!-- end of "card-body" -->   
-			</div>
-		</div> <!-- end of "card" three -->
+  <div role="tablist">
+  <div  v-for="t in texts"  :key="t.num">
+    <b-card no-body class="mb-1">
+      <b-card-header header-tag="header" class="p-1" role="tab">
+        <b-btn block v-b-toggle="'accordion-' + key " variant="info"> Customer Review {{ t.num  }} </b-btn>
+      </b-card-header>
+      
+      <b-collapse id="'accordion-' + key  "  visible accordion="my-accordion" role="tabpanel">
+      
+      <b-card-body>
+        <b-card-text>I start opened because <code>visible</code> is <code>true</code></b-card-text>
+        <b-card-text>{{ t.text }}</b-card-text>
         
-    <div class="card">
-        <div class="card-header">
-          <h5>Customer Review 
-          <a href="#four" data-parent="#review" data-toggle="collapse">
-            Four
-          </a>
-          </h5>
-        </div> <!-- end of "card-header" -->
-        <div id="four" class="collapse">
-          <div class="card-body">
-            4-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, nostrum voluptatum! Illo cum repellat, vero sequi, impedit repellendus ipsa incidunt distinctio nostrum in quaerat velit, assumenda quos earum quo quas!
-          </div>  <!-- end of "card-body" -->   
-        </div>
-      </div> <!-- end of "card" four -->
-    </div> <!-- end of "#acd" -->
-
+      </b-card-body>
+      </b-collapse>
+    </b-card>
+  </div>
   </div>
 </template>
 
 <script>
-export default {
-
-}
+  export default {
+    data() {
+      return {
+        texts: [
+           {
+            id: 0,
+            num: 1,
+            text: 'one -- Anim pariatur cliche reprehenderit, eiusmod high life accusamus terry richardson'
+           },
+           {
+              id: 1,
+              num: 2,
+              text: 'two -- Anim pariatur cliche reprehenderit, eiusmod high life accusamus terry richardson'
+            },
+           {
+              id: 2,
+              num: 3,
+              text: 'three -- Anim pariatur cliche reprehenderit, eiusmod high life accusamus terry richardson'
+            }
+         ]
+        };
+    }
+  }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#review {
-    color: black;
-    background: lightblue;
+body {
+  background: pink;
+}
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: black;
 }
 </style>

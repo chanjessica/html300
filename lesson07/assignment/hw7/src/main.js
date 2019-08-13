@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
   //A1- import the router 2-tell vue to use it 3-
 import VueRouter from 'vue-router'
+import './main.scss'
   //B1 - after install vue-bootstrap then  register BootstrapVue plugin in your app entry point:
 import BootstrapVue from 'bootstrap-vue'
  //B2- import Bootstrap and BootstrapVue css files:

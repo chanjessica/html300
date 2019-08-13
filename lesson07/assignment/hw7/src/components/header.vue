@@ -3,6 +3,8 @@
         <div class="container">	
             <div class="collapse navbar-collapse" id="item-nav">
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><router-link to="/hello">Hello </router-link>  </li>
+                    <li class="nav-item"><router-link to="/HW7">HW7 </router-link>  </li>
                     <li class="nav-item"><router-link to="/">Home </router-link>  </li>
                     <li class="nav-item"><router-link to="/menu"> Menu</router-link></li>
                     <li class="nav-item"><router-link to="/contact"> Contact</router-link></li>
