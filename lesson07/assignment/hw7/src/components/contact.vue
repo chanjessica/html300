@@ -1,6 +1,9 @@
 <template>
     <div>
         <b-container fluid>
+            <!-- ###### V-IF ######## -->
+            <div v-if="login"><h1>You are Login</h1></div>
+            <div v-else><h1>Please login</h1> </div>
              <!-- #######  modals  ####### -->
             <h2 class="mt-4 text-center" >modals </h2>
             <b-button v-b-modal.modal-1>FeedBack</b-button>
@@ -26,7 +29,8 @@
                     <b-button v-b-popover.hover.top="'Exit'" variant="primary">Log Out</b-button>
                 </b-col>
                 <b-col md="8" class="px-5">
-                    <b-button v-b-popover.hover.bottom="'Sign IN'" variant="primary"> Log IN</b-button>
+                    <b-button v-b-popover.hover.bottom="'Sign IN'" variant="primary"
+                            v-on:click="toggleview"> Log In</b-button>
                 </b-col>
              </b-row>
             
@@ -74,6 +78,6 @@
 <style scoped>
 body {
     min-height: 100vh;
-    background: pink;
+    background: rgb(224, 207, 210);
 }
 </style>

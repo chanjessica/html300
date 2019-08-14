@@ -7,7 +7,7 @@
                     <li class="nav-item"><router-link to="/HW7">HW7 </router-link>  </li>
                     <li class="nav-item"><router-link to="/">Images </router-link>  </li>
                     <li class="nav-item"><router-link to="/menu"> Grid</router-link></li>
-                    <li class="nav-item"><router-link to="/contact">Modals Popovers Tooltips</router-link></li>
+                    <li class="nav-item"><router-link to="/contact">v-if&v-elase Modals Popovers Tooltips</router-link></li>
                     <li class="nav-item"><router-link to="/blog"> Accordion</router-link></li>
                 </ul>
             </div>  <!-- end of "navbar-collapse"-->    
