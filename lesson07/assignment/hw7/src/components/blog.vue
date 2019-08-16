@@ -1,12 +1,12 @@
 <template>
   <div role="tablist">
-  <div  v-for="t in texts"  :key="t.num">
+  <div  v-for="(t, index) in texts"  :key="index">
     <b-card no-body class="mb-1">
       <b-card-header header-tag="header" class="p-1" role="tab">
-        <b-btn block v-b-toggle="'accordion-' + key " variant="info"> Customer Review {{ t.num  }} </b-btn>
+        <b-btn block v-b-toggle="'accordion-' + index " variant="info"> Customer Review {{ t.num  }} </b-btn>
       </b-card-header>
       
-      <b-collapse id="'accordion-' + key  "  visible accordion="my-accordion" role="tabpanel">
+      <b-collapse :id="'accordion-' + index "  visible accordion="my-accordion" role="tabpanel">
       
       <b-card-body>
         <b-card-text>I start opened because <code>visible</code> is <code>true</code></b-card-text>

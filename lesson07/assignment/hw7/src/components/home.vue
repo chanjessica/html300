@@ -11,8 +11,8 @@
       <b-carousel-slide   class="MyCustomClass"
         v-for="i in imgList" 
         :key="i.id" 
-        img-src= ":i.imgSrc" 
-        alt=":i.img">
+        :img-src= "i.imgSrc" 
+        alt="i.img">
       </b-carousel-slide>
 
     </b-carousel>
@@ -30,9 +30,9 @@
     data() {
       return {
         message: "carousel slider",
-        imgList: [  {id:0, img: "food 1", imgSrc: '"http://lorempixel.com/output/food-q-c-640-480-1.jpg"'},
-                    {id:1, img: "food 2", imgSrc: '"http://lorempixel.com/output/food-q-c-640-480-2.jpg"'},
-                    {id:2, img: "food 3", imgSrc: '"http://lorempixel.com/output/food-q-c-640-480-3.jpg"'}
+        imgList: [  {id:0, img: "food 1", imgSrc: "http://lorempixel.com/output/food-q-c-640-480-1.jpg"},
+                    {id:1, img: "food 2", imgSrc: "http://lorempixel.com/output/food-q-c-640-480-2.jpg"},
+                    {id:2, img: "food 3", imgSrc: "http://lorempixel.com/output/food-q-c-640-480-3.jpg"}
                 ]
       };
     }
