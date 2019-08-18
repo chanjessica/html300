@@ -1,11 +1,16 @@
 <template>
   <div id="app">
-      <app-header></app-header>
-     <router-view></router-view>
+    <div class="container">
+      <!-- <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3"> -->
+    <app-header></app-header>
+
+    <router-view></router-view>
     <!-- default html   
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
    -->
+      <!-- </div> -->
+    </div>
   </div>
 </template>
 
