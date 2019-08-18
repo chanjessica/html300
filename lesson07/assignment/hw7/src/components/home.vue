@@ -35,11 +35,13 @@
                 ]
       };
     },
-    onSlideStart(){
-      this.slide = true;
-    },
-    onSlideEnd() {
-      this.slide = false;
+    methods: {
+      onSlideStart(){
+        this.slide = true;
+      },
+      onSlideEnd() {
+        this.slide = false;
+      }
     }
 }
 </script>
