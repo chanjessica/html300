@@ -1,9 +1,10 @@
 <template>
+  <div>
+    <!--  passing data  through tag:  /page/home/index  <ImgPreview id= url= title= price=>  -->
     <nuxt-link :to="'/img/'+ id" class="img-preview">
       <article>
           <div class="container">
-        <div class="img-thumbnail" 
-             :style="{ backgroundImage: ' url(' + url +  ')  '} ">
+        <div class="img-thumbnail"  :style="{ backgroundImage: ' url(' + url +  ')  '} ">
         </div>
         </div>
         <div class="img-content">
@@ -12,6 +13,8 @@
         </div>
       </article>
     </nuxt-link>
+    <p> components/img/img.vue</p>
+    </div>
 </template>
 
 <script>
@@ -45,7 +48,7 @@ export default {
   background-position: center;
   background-size: cover;
 }
-img-content{
+.img-content{
   padding: 10px;
   text-align:center;
 }

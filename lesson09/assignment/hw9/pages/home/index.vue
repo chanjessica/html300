@@ -17,6 +17,9 @@
       title="Food itme 3"
       price=" 8.99" />
   </section>
+    <section>
+    <p>/pages/home/index.vue</p>
+  </section>
   </div>
 
 </template>

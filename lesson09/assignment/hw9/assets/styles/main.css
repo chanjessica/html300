@@ -33,3 +33,30 @@ html, body{
 .links {
   padding-top: 15px;
 }
+
+.img-thumbnail {
+  width: 50%;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+}
+img-content{
+  padding: 10px;
+  text-align:center;
+}
+.img-preview {
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 2px #ccc;
+    background-color: lavender;
+    width: 90%;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+@media (min-width: 768px){
+    .img-preview {
+        width: 400px;
+        margin: 10px;
+    }
+}
