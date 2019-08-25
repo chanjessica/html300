@@ -7,7 +7,7 @@
       <b-row>
            <!-- 1st column -->
          <b-col md  id="e1" > 
-            <h4>Beef</h4>
+            <h4>Rice</h4>
             <div class="entrees" id="e3">
                <div v-for = "food in rice" :key="food.id">
                  {{ food.item }} - ${{ food.price}} <br>
