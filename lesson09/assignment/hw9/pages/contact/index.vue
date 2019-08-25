@@ -30,8 +30,7 @@
                     <b-button v-b-popover.hover.top="'Exit'" variant="primary">Log Out</b-button>
                 </b-col>
                 <b-col md="8" class="px-5">
-                    <b-button v-b-popover.hover.bottom="'Sign IN'" variant="primary"
-                            v-on:click="toggleview"> Log In</b-button>
+                    <b-button v-b-popover.hover.bottom="'Sign IN'" variant="primary"> Log In</b-button>
                 </b-col>
              </b-row>
             

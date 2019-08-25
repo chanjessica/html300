@@ -30,7 +30,7 @@ export default {
             reguired: true
         },
         price:{
-            type: Number,
+            type: String,
             reguired: true
         },
         url:{

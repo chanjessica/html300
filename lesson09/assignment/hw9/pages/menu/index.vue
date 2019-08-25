@@ -70,25 +70,25 @@
             message: " BootstrapVue Grid",
             link: './contact',
             rice : [
-                     {id:0, item: "Stream Rice", price: "1.95"},
-                     {id:1, item: "Chickeen Fried Rice", price: "6.77"},
-                     {id:2, item: "Beef Fired Rice", price: "9.99"},
-                     {id:3, item: "Pork Fired Rice", price: "8.99"}
+                     {id:0, item: "Stream Rice", price: 1.95 },
+                     {id:1, item: "Chickeen Fried Rice", price: 6.77 },
+                     {id:2, item: "Beef Fired Rice", price: 9.99 },
+                     {id:3, item: "Pork Fired Rice", price: 8.99 }
                   ],
             beef : [
-                     {id:0, item: "Beef Noodle Soup", price: "9.95"},
-                     {id:1, item: "Hot and Sour Soup", price: "6.77"},
-                     {id:2, item: "Pot Potsticker", price: "8.99"}
+                     {id:0, item: "Beef Noodle Soup", price: 9.95 },
+                     {id:1, item: "Hot and Sour Soup", price: 6.77 },
+                     {id:2, item: "Pot Potsticker", price: 8.99 }
                   ],
             pork : [
-                     {id:0, item: "Sweet and Sour Pork", price: "11.95"},
-                     {id:1, item: "BBQ Pork", price: "8.77"},
-                     {id:2, item: "Pot Potsticker", price: "8.99"}
+                     {id:0, item: "Sweet and Sour Pork", price: 11.95 },
+                     {id:1, item: "BBQ Pork", price: 8.77 },
+                     {id:2, item: "Pot Potsticker", price: 8.99 }
                   ],
             chicken : [ 
-                     {id:0, item: "General Tso Chicken", price: "12.95"},
-                     {id:1, item: "Hot and Sour Soup", price: "6.77"},
-                     {id:2, item: "Pot Potsticker", price: "8.99"}
+                     {id:0, item: "General Tso Chicken", price: 12.95 },
+                     {id:1, item: "Hot and Sour Soup", price: 6.77 },
+                     {id:2, item: "Pot Potsticker", price: 8.99 }
                      ]
             };
       },
