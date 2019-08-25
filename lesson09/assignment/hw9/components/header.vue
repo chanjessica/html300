@@ -13,6 +13,9 @@
              <li>
                 <nuxt-link to="/contact">Contact</nuxt-link>
             </li>
+             <li>
+                <nuxt-link to="/API">API</nuxt-link>
+            </li>
         </ul>
     </header> 
 </template>
