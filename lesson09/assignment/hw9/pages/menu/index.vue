@@ -1,6 +1,5 @@
 <template>
    <div id='app'>
-       <h1> /pages/menu/index.vue</h1>
       <h2 class="mt-4 text-center">{{ message }}</h2>
         <p>Numbre of Orders: {{counter}}</P>
       <!-- this page use BootstrapVue Grid system  -->
@@ -40,7 +39,7 @@
             <div class="entrees" id="e2">
                <div v-for = "food in pork" :key="food.id"> 
                  {{ food.item }} - ${{ food.price}}  <br>
-                    <button v-on:click ="order">Order </button>
+                    <button v-on:click ="order(8.9 )">Order </button>
                </div>
             </div>
          </b-col>
@@ -51,20 +50,23 @@
          <!-- ######  COLLAPSE  #######-->
          <h4 class="mt-5 text-center"> </h4>
          <div class="container justify-content-center">
-            <button class="btn btn-success d-block mb-4" v-on:click="payment">
+            <!-- <button class="btn btn-success d-block mb-4" v-on:click="payment"> -->
+             <button class="btn btn-success d-block mb-4" >
                 <a v-bind:href="link" target="_blank">Payment </a>
             </button>
          </div>
       </footer>
+      <small> /pages/menu/index.vue</small>
    </div>
 </template>
 
 <script>
    export default {
-      name: 'menu',
+      name: 'foodMenu',
       data() {
          return {
             counter:0,
+            total:0,
             message: " BootstrapVue Grid",
             link: './contact',
             rice : [
@@ -91,9 +93,14 @@
             };
       },
       methods: {
-         order: function(){ this.counter++; } ,
+         order: function(price){ 
+            this.counter++; 
+            this.total += price;
+         } 
+      //    ,
+      //    payment: function(){
+      //       this.total;
       }
-            
    }
 </script>
 

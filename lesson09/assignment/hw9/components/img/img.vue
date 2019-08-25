@@ -13,7 +13,7 @@
         </div>
       </article>
     </nuxt-link>
-    <p> components/img/img.vue</p>
+
     </div>
 </template>
 

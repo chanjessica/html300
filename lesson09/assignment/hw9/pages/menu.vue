@@ -1,7 +1,7 @@
 <template>
     <div>
-      <input type="text" v-model="userId">
-   <h1>nesting chilld</h1>
+      <!-- <input type="text" v-model="userId"> -->
       <nuxt-child/>
+        <small>nesting chilld</small>
     </div> 
 </template>
