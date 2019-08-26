@@ -3,7 +3,6 @@
       <nuxt-child/>
       <input type="text" v-model="userId">
       <button @click="onLoadUser">Load User </button>      
-
     </div> 
 </template>
 

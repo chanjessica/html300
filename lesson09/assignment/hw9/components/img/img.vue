@@ -3,8 +3,8 @@
     <!--  passing data  through tag:  /page/home/index  <ImgPreview id= url= title= price=>  -->
     <nuxt-link :to="'/img/'+ id" class="img-preview">
       <article>
-          <div class="container">
-        <div class="img-thumbnail"  :style="{ backgroundImage: ' url(' + url +  ')  '} ">
+        <div class="container">
+            <div class="img-thumbnail"  :style="{ backgroundImage: ' url(' + url +  ')  '} ">
         </div>
         </div>
         <div class="img-content">
@@ -43,7 +43,7 @@ export default {
 
 <style  scoped>
 .img-thumbnail {
-  width: 50%;
+  width: 100%;
   height: 200px;
   background-position: center;
   background-size: cover;

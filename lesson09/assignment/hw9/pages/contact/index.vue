@@ -1,6 +1,25 @@
 <template>
     <div>
-        <h1> /pages/contact/index.vue</h1>
+        <small> /pages/contact/index.vue</small>
+        <!-- SLOT -->
+        <div id="slot">
+          <app-quote>
+            <h2 slot="title"> {{ quoteTitle | toUpper}}  </h2>   
+            <P slot="content"> {{ quoteContent | toLower}}</P>
+            <p>Call us at (206)123-4567</p>
+        </app-quote>
+        <router-view></router-view>
+        <div class="menu">
+            Type in what you are looking for.<br> e.g. Chicken <input v-model="filterFood"> 
+        <ul><li v-for="(food, index) in filterMenu" v-bind:key="index"> {{ food }} </li></ul>
+        </div>
+        <div  v-if="imgList"> 
+              <!-- whatever bind to the v-bind is the info passing to the child component -->
+        <app-home v-for="img in imgList"  v-bind:title="pageTitle" v-bind:imgData="img" v-bind:key="img.id">
+        </app-home>
+      </div>
+    </div>
+
         <b-container fluid>
             <!-- ###### V-IF ######## -->
             <div v-if="login"><h1>You are Login</h1></div>
@@ -64,6 +83,7 @@
 </template>
 
 <script>
+import Quote from '@/components/Quote.vue';
   export default {
       name: "contact",
       data(){
@@ -79,5 +99,18 @@
 body {
     min-height: 100vh;
     background: rgb(224, 207, 210);
+}
+ #slot {
+   margin-top: 0;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: black ;
+  background: plum;
+  margin-top: 60px;
+}
+.menu {
+  text-align: left;
 }
 </style>
