@@ -8,7 +8,9 @@ hw10
 
 Web analytics is process of analyzing visitors behavior, e.g, who are the vistiros, how much time are they spending on the site, what are they viewing on the site, etc.
 These information help us to improve the effectiveness of a website's content.  One of the well known analytics is Google Analytics.
+
 SEO could increase the traffics go through to the website if we do it right, e.g., don’t overload H1 tags on the page, find relevant keywords that people are searching for and see how these search queries fit into the business, link quality backlinks to the page to get higher rank in Google. 
+
 
 2- Added detailed plan of ideal SEO implementation 
 
