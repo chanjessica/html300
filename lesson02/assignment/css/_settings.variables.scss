@@ -1,6 +1,6 @@
 // Colors
-$gray: #f6f5f6;
-$white: #ffffff;
+$gray: #d3d3d3;
+$white: #3b3737;
 $black: #000000;
 $green: #7acb00;
 $pink: #ff0097;
@@ -10,3 +10,40 @@ $yellow: #ffb617;
 $robins: #01c1d6;
 $purple: #6e27c5;
 $blue: #150f96;
+
+$text-color: #000;
+$hover-color: #16a085;
+$link-color: green;
+$color-light: lighten(red, 50%);
+$color-dark: darken(red, 20%);
+
+
+//responsive breakpoints
+$breakpoint-small: 767px;
+$breakpoint-medium: 1024px;
+$braekpoint-large: 1440px;
+
+//alignment
+$text-align: center;
+
+
+
+//size
+$radius: 5px;
+$card-image-radius: 50%;
+$card-size-width: 65%;
+$card-size-height: auto;
+$li-img-size: 8%;
+
+//margin
+$card-margin-top: 5%;
+$card-li-margin: 3%;
+
+//font 
+$base-font-size: 16px;
+$base-font-standard: arial, helvetica, "free sans", sans-serif;
+$font-weight: bold;
+
+//li style
+$list-style-type: none;
+

@@ -1,0 +1,31 @@
+.desc {
+   /* border:  10px solid green;*/
+   width: 250px;
+   height: 200px;
+   background: $gray;
+   box-sizing: border-box;
+   display: inline-block;  
+	a { 
+		color: $text-color;
+		text-decoration: none; 
+	} 
+	a:hover {
+		background-color: $hover-color;
+	}
+}
+
+ul {
+	list-style-type: $list-style-type;
+	padding-left: 0;
+	margin-bottom: 0;
+}
+li {
+	margin-top: $card-li-margin;
+	img {
+		width: $li-img-size;
+		height: auto;
+		background-color: $gray;
+		overflow: auto;
+	}
+}
+
