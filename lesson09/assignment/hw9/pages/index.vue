@@ -5,13 +5,13 @@
         </imgList>
     </section> -->
     <div class="myCustomClass">
-          <h2 slot="title"> {{ quoteTitle | toUpper }} </h2>
-          <h3 slot="content"> {{ quoteContent | toLower }} </h3>
-      <div class="picture">
-    <b-carousel  v-model="slide"  id="carousel-1" background="#ababab"  img-width="500" img-height="350" controls >
-      <b-carousel-slide v-for="slide in posts" 
+        <h2 slot="title"> {{ quoteTitle | toUpper }} </h2>
+        <h3 slot="content"> {{ quoteContent | toLower }} </h3>
+    <div class="picture">
+    <b-carousel id="carousel-1" background="#ababab"  img-width="500" img-height="350" controls >
+        <b-carousel-slide v-for="slide in posts" 
              :bind="slide" :key="slide.id" :caption= "slide.price" :img-src= "slide.imgSrc"  alt="slide.food" >
-      </b-carousel-slide>
+        </b-carousel-slide>
     </b-carousel>
     </div>
     </div>
@@ -39,20 +39,19 @@
       }
     },
     // filters:{    toCap,     toLower,      toUpper    }
-      filters: { toCap(v){
-        if(!v) return '';
-          v=v.toString();
-          return v.charAt(0).toUpperCase() + v.slice(1);
-        }
-      },
-      filters:{ toLower(v){
+      filters: { 
+        toCap(v){
+          if(!v) return '';
+             v=v.toString();
+            return v.charAt(0).toUpperCase() + v.slice(1);
+        },
+        toLower(v){
           return v.toLowerCase();
-        }
-      },
-      filters:{ toUpper(v){
+        },
+        toUpper(v){
           return v.toUpperCase();
         }
-      }
+     }
   }
 </script>
 
