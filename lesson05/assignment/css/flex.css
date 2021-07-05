@@ -1,0 +1,24 @@
+@media (max-widht: 500px){
+    img {
+        display: none;
+    }
+}
+@media (min-width:629px)  {
+    body{
+    margin: 0 100px;
+    display: block;
+    max-width: 1600px;
+}
+.parent{display : flex; flex-flow: row nowrap; align-items: center;  }
+.child { flex-grow:1; }
+.child>div {height: 30px;}
+.nav-child1{ flex-basis: 500px;  text-align: left;}
+.nav-child2{ flex-basis: 200px;  }
+.nav-child3{ flex-basis: 200px;  }
+.nav-child4{ flex-basis: 200px;  }
+.nav-child5{ flex-basis: 500px;  text-align: right;}
+.main-child{ align-self: center;}
+.aside-child{ flex-basis: 400px; flex-grow: 100px; display:flex; flex-flow: column wrap; height: 400px;}
+.entrees{ justify-content: space-around; }
+.main-child{  flex-basis: 700px; flex-grow: 1;}
+}

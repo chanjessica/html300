@@ -1,0 +1,44 @@
+body, html, ul, li, img, div, nav {
+	margin: 0;
+	padding: 0;
+}
+html {
+    // background-image: linear-gradient(red, yellow); 
+    min-height: 100vh;
+    font-size: 1rem;
+	text-align: center;
+}
+/*-- style for body --*/
+body {
+	margin: 0 auto;
+    background-image: linear-gradient(-10deg, #C62828, #BA68C8);
+    color: #fff;
+    font-family: Ubuntu, Helvetica, 'Segoe UI', Tahoma; 
+    text-shadow: 1px 1px 0 #000;
+}
+
+a{
+    text-decoration: none;
+}
+/*--- style for nav bar ---*/
+.list_item {
+	list-style-type: none;
+  	border: 1px solid white;
+	display: inline;
+	padding: 0 6% 3% 6%;
+	
+}
+.list_item ,.list_item__sub> a:hover{
+    background-color: rgba(255, 255, 255, .25);
+    text-decoration: underline;
+    transition: background-color ease 0.5s;
+}
+/*-- style Font Awesome Icons  --*/
+.fa-home {
+    color: white;
+    font-size: 40px;
+    }
+.fa-envelope {
+    color: white;
+    font-size: 50px;
+    }
